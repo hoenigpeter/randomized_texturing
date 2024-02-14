@@ -1,6 +1,5 @@
 <h1 align="center">
-On Texture Randomization and its Relation to Object Detection and 6D
-Pose Estimation
+STAR: Shape-focused Texture Agnostic Representations for Improved Object Detection and 6D Pose Estimation
 </h1>
 
 <div align="center">
@@ -18,8 +17,7 @@ Pose Estimation
 ![Pipeline](images/pipeline.jpg)
 
 # Datasets
-- To generate the randomized texturing dataset in the BOP format either download them from: PLACEHOLDER111
-- or use our rendering scripts provided in ./blenderproc_rendering
+- To generate the randomized texturing dataset in the BOP format use our rendering scripts provided in ./blenderproc_rendering
 - to use the rendering scripts, Blenderproc is necessary: https://github.com/DLR-RM/BlenderProc.git
 - copy & paste the scripts to /Blenderproc/examples/datasets/bop_challenge
 - and execute e.g. with: `python rerun.py run examples/datasets/bop_challenge/main_tless_random_texture.py ../datasets resources/cc_textures examples/datasets/bop_challenge/output --num_scenes=1000`
