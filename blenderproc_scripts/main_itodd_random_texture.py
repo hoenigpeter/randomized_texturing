@@ -1,3 +1,6 @@
+# This is a modified version of:
+# https://github.com/DLR-RM/BlenderProc/blob/main/examples/datasets/bop_challenge/main_itodd_random.py
+
 import blenderproc as bproc
 import argparse
 import os
@@ -11,9 +14,6 @@ parser.add_argument('--num_scenes', type=int, default=2000, help="How many scene
 args = parser.parse_args()
 
 bproc.init()
-
-#python rerun.py run examples/datasets/bop_challenge/main_itodd_random_texture.py ../datasets resources/cc_textures examples/datasets/bop_challenge/output --num_scenes=1000
-
 
 # load bop objects into the scene
 target_bop_objs = bproc.loader.load_bop_objs(bop_dataset_path = os.path.join(args.bop_parent_path, 'itodd'), mm2m = True)

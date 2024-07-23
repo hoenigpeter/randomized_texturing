@@ -1,5 +1,5 @@
 <h1 align="center">
-STAR: Shape-focused Texture Agnostic Representations for Improved Object Detection and 6D Pose Estimation
+Shape-biased Texture Agnostic Representations for Improved Textureless and Metallic Object Detection and 6D Pose Estimation
 </h1>
 
 <div align="center">
@@ -24,6 +24,6 @@ STAR: Shape-focused Texture Agnostic Representations for Improved Object Detecti
 
 # Object Detection and Pose Estimation Software
 We used the following list of algorithms:
-- YOLOx: https://github.com/shanice-l/gdrnpp_bop2022
+- MMDetection: https://github.com/open-mmlab/mmdetection
 - Pix2Pose: https://github.com/kirumang/Pix2Pose
 - GDR-Net: https://github.com/THU-DA-6D-Pose-Group/GDR-Net

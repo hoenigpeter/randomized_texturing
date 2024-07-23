@@ -1,9 +1,10 @@
+# This is a modified version of:
+# https://github.com/DLR-RM/BlenderProc/blob/main/examples/datasets/bop_challenge/main_tless_random.py
+
 import blenderproc as bproc
 import argparse
 import os
 import numpy as np
-
-#python rerun.py run examples/datasets/bop_challenge/main_tless_random_texture.py ../datasets resources/cc_textures examples/datasets/bop_challenge/output --num_scenes=1000
 
 parser = argparse.ArgumentParser()
 parser.add_argument('bop_parent_path', help="Path to the bop datasets parent directory")
@@ -85,7 +86,7 @@ for i in range(args.num_scenes):
 
     for obj in (sampled_distractor_bop_objs):        
         mat = obj.get_materials()[0]
-        if obj.get_cp("bop_dataset_name") in ['itodd', 'tless']:
+        if obj.get_cp("bop_dataset_name") in ['itodd']:
             grey_col = np.random.uniform(0.1, 0.9)   
             mat.set_principled_shader_value("Base Color", [grey_col, grey_col, grey_col, 1])        
         mat.set_principled_shader_value("Roughness", np.random.uniform(0, 0.5))
@@ -93,8 +94,6 @@ for i in range(args.num_scenes):
             mat.set_principled_shader_value("Metallic", np.random.uniform(0.5, 1.0))
         obj.enable_rigidbody(True, mass=1.0, friction = 100.0, linear_damping = 0.99, angular_damping = 0.99)
         obj.hide(False)
-
-    obj.hide(True)
     
     # Sample two light sources
     light_plane_material.make_emissive(emission_strength=np.random.uniform(3,6), 
