@@ -16,7 +16,10 @@ Shape-biased Texture Agnostic Representations for Improved Textureless and Metal
 
 ![Pipeline](images/pipeline.jpg)
 
-# Datasets
+# Download Datasets
+- https://huggingface.co/datasets/hoenigpeter/randomized_texturing
+
+# Render Datasets
 - To generate the randomized texturing dataset in the BOP format use our rendering scripts provided in ./blenderproc_rendering
 - to use the rendering scripts, Blenderproc is necessary: https://github.com/DLR-RM/BlenderProc.git
 - copy & paste the scripts to /Blenderproc/examples/datasets/bop_challenge
